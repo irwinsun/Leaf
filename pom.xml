@@ -15,24 +15,14 @@
     <description>Distributed ID Generate Service</description>
     <developers>
         <developer>
-            <id>zhangzhitong</id>
-            <name>zhangzhitong</name>
-            <email>zhitongzhang@outlook.com</email>
-        </developer>
-        <developer>
-            <id>zhanghan</id>
-            <name>zhanghan</name>
-            <email>han122655904@163.com</email>
-        </developer>
-        <developer>
-            <id>xiezhaodong</id>
-            <name>xiezhaodong</name>
-            <email>pursuer_xie@foxmail.com</email>
+            <name>devops</name>
+            <email>devops@tencent.com</email>
+            <organization>tencent</organization>
         </developer>
     </developers>
     <organization>
-        <name>Meituan-Dianping Group</name>
-        <url>https://github.com/Meituan-Dianping</url>
+        <name>Tencent Blueking</name>
+        <url>http://bk.tencent.com</url>
     </organization>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -168,16 +158,16 @@
     </dependencyManagement>
 
     <distributionManagement>
-        <repository>
-            <id>${releaseId}</id>
-            <name>${releaseName}</name>
-            <url>${releaseUrl}</url>
-        </repository>
         <snapshotRepository>
-            <id>${snapshotId}</id>
-            <name>${snapshotName}</name>
-            <url>${snapshotUrl}</url>
+            <id>ossrh</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <name>Nexus Release Repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
     </distributionManagement>
     <build>
         <finalName>leaf</finalName>
@@ -197,6 +187,18 @@
                 <version>2.4.2</version>
                 <configuration>
                     <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+            <!-- Nexus Staging Plugin -->
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.8</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>false</autoReleaseAfterClose>
                 </configuration>
             </plugin>
             <plugin>
