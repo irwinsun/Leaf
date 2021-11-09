@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.sankuai.inf.leaf</groupId>
+    <groupId>com.tencent.devops.leaf</groupId>
     <artifactId>leaf-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.1-RELEASE</version>
+    <version>1.0.0-RELEASE</version>
     <name>Leaf</name>
     <modules>
         <module>leaf-core</module>
@@ -62,9 +62,9 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>com.sankuai.inf.leaf</groupId>
+                <groupId>com.tencent.devops.leaf</groupId>
                 <artifactId>leaf-core</artifactId>
-                <version>1.0.1-RELEASE</version>
+                <version>1.0.0-RELEASE</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -169,12 +169,14 @@
 
     <distributionManagement>
         <repository>
-            <id>rdc-releases</id>
-            <url>https://repo.rdc.aliyun.com/repository/30278-release-hOamJV/</url>
+            <id>${releaseId}</id>
+            <name>${releaseName}</name>
+            <url>${releaseUrl}</url>
         </repository>
         <snapshotRepository>
-            <id>rdc-snapshots</id>
-            <url>https://repo.rdc.aliyun.com/repository/30278-snapshot-k5cEXE/</url>
+            <id>${snapshotId}</id>
+            <name>${snapshotName}</name>
+            <url>${snapshotUrl}</url>
         </snapshotRepository>
     </distributionManagement>
     <build>
@@ -187,6 +189,14 @@
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.4.2</version>
+                <configuration>
+                    <skipTests>true</skipTests>
                 </configuration>
             </plugin>
             <plugin>

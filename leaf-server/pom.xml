@@ -3,13 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.sankuai.inf.leaf</groupId>
+        <groupId>com.tencent.devops.leaf</groupId>
         <artifactId>leaf-parent</artifactId>
-        <version>1.0.1-RELEASE</version>
+        <version>1.0.0-RELEASE</version>
     </parent>
-    <groupId>com.sankuai.inf.leaf</groupId>
     <artifactId>leaf-server</artifactId>
-    <version>1.0.1-RELEASE</version>
+    <version>1.0.0-RELEASE</version>
     <packaging>jar</packaging>
     <name>leaf-server</name>
     <description>Leaf HTTP Server</description>
@@ -31,7 +30,7 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.sankuai.inf.leaf</groupId>
+            <groupId>com.tencent.devops.leaf</groupId>
             <artifactId>leaf-core</artifactId>
         </dependency>
         <dependency>
@@ -62,7 +61,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot-dependencies.version}</version>
                 <configuration>
-                    <mainClass>com.sankuai.inf.leaf.server.LeafServerApplication</mainClass>
+                    <mainClass>com.tencent.devops.leaf.server.LeafServerApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

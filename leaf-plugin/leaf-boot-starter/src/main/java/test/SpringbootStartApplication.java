@@ -1,6 +1,6 @@
 package test;
 
-import com.sankuai.inf.leaf.plugin.annotation.EnableLeafServer;
+import com.tencent.devops.leaf.plugin.annotation.EnableLeafServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
