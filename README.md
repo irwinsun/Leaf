@@ -116,7 +116,7 @@ insert into T_LEAF_ALLOC(BIZ_TAG, MAX_ID, STEP, DESCRIPTION) values('leaf-segmen
 
 ##### 配置相关数据项
 
-在leaf.properties中配置leaf.jdbc.url, leaf.jdbc.username, leaf.jdbc.password参数
+在leaf.properties中配置leaf.segment.url, leaf.segment.username, leaf.segment.password参数
 
 #### Snowflake模式
 
