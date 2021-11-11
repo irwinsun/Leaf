@@ -13,6 +13,7 @@
         <module>leaf-plugin</module>
     </modules>
     <description>Distributed ID Generate Service</description>
+    <url>https://github.com/ci-plugins/java-plugin-sdk</url>
     <licenses>
         <license>
             <name>MIT</name>
