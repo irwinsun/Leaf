@@ -13,6 +13,14 @@
         <module>leaf-plugin</module>
     </modules>
     <description>Distributed ID Generate Service</description>
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>https://github.com/Meituan-Dianping/Leaf/blob/master/LICENSE</url>
+            <distribution>oss</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
     <developers>
         <developer>
             <name>devops</name>
